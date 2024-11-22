@@ -42,7 +42,8 @@ if ($marks > 79) {
 ## Write a program using array which accepts five values and print the values. 
 
 ```html
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>  
 <head> 
 <title>Array Values</title> 
 </head> 
@@ -63,7 +64,8 @@ echo "$value <br>";
 ## Write a program using Looping Structure with concept of Functions. 
 
 ```html
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head> 
 <title> Function using Looping Structure </title> 
 </head> 
@@ -78,6 +80,7 @@ function table($n)
 }
   table(5);
 ?>
+</html>
 ```
 ---
 
@@ -104,7 +107,8 @@ function table($n)
 ## Write a program in PHP to display Multiplication Table using nested for loop. 
 
 ```html
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head> 
 <title>Multiplication Table</title> 
 </head> 
