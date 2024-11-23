@@ -27,7 +27,7 @@ if ($marks > 79) {
     echo "Grade: B";
 } elseif ($marks > 50) {
     echo "Grade: C";
-} elseif ($marks >= 50) {
+} elseif ($marks == 50) {
     echo "Grade: D";
 } else {
     echo "Grade: F";
