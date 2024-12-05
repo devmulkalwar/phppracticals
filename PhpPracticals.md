@@ -175,7 +175,7 @@ echo "Sorted Array: " . implode(", ", $arrayToSort) . "<br>";
 ```
 ---
 # Practical 7:	
-## Write a program In PHP to Sort an array using Bubble Sort function.
+## Design the personal information form, submit and retrieve the form data using php $_POST, $_GET, $ REQUEST variable.  
 
 ```html
 HTML File: - 
