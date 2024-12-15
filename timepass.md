@@ -13,3 +13,7 @@ $ cd wifite2
 ```bash
 $ ./install.sh
 ```
+
+```bash
+pkg update && pkg upgrade && pkg install root-repo airmon-ng aircrack-ng wlanconfig git python clang
+```
