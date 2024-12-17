@@ -2,14 +2,17 @@
 
 ## Index Table
 
-| Practical No. | Title                                                                                   |
-|---------------|-----------------------------------------------------------------------------------------|
-| 1             | [Conditional Structure](#practical-1)                                                 |
-| 2             | [Array to Accept and Print Five Values](#practical-2)                                  |
-| 3             | [Looping Structure with Functions](#practical-3)                                      |
-| 4             | [Type Casting a Variable](#practical-4)                                               |
-| 5             | [Multiplication Table](#practical-5)                                                  |
-| 6             | [Bubble Sort Function](#practical-6)  
+| Practical No. | Title                                           |
+|---------------|-------------------------------------------------|
+| 1             | [Practical 1](#practical-1)                    |
+| 2             | [Practical 2](#practical-2)                    |
+| 3             | [Practical 3](#practical-3)                    |
+| 4             | [Practical 4](#practical-4)                    |
+| 5             | [Practical 5](#practical-5)                    |
+| 6             | [Practical 6](#practical-6)                    |
+| 7             | [Practical 7](#practical-7)                    |
+| 8             | [Practical 8](#practical-8)                    |
+| 9             | [Practical 9](#practical-9)                    |
 
 # Practical 1:	
 ## Write a program using Conditional Structure. 
@@ -295,7 +298,7 @@ session_destroy();
 </html>
 ```
 ---
-# Practical 8:
+# Practical 9:
 ## Study of MySQL DDL, DML, DCL Commands.
 
 ### DDL
