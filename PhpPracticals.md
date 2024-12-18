@@ -603,7 +603,7 @@ $conn->close();
 ```
 ---
 
-# Practical 7:	
+# Practical 14:	
 ## Write a PHP Code to make database connection, Create Data Base, Create Table In Mysql.
 
 ```html
@@ -648,7 +648,7 @@ $conn->close();
 ```
 ---
 
-# Practical 7:	
+# Practical 15:	
 ## Write a PHP code Insert, Delete, Update, Select the Data From Database.
 
 ```html
