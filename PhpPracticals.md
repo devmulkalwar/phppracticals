@@ -13,6 +13,12 @@
 | 7             | [Practical 7](#practical-7)                    |
 | 8             | [Practical 8](#practical-8)                    |
 | 9             | [Practical 9](#practical-9)                    |
+| 10            | [Practical 10](#practical-10)                  |
+| 11            | [Practical 11](#practical-11)                  |
+| 12            | [Practical 12](#practical-12)                  |
+| 13            | [Practical 13](#practical-13)                  |
+| 14            | [Practical 14](#practical-14)                  |
+| 15            | [Practical 15](#practical-15)                  |                  |
 
 # Practical 1:	
 ## Write a program using Conditional Structure. 
@@ -63,6 +69,7 @@ echo "$value <br>";
 
 ```
 ---
+
 # Practical 3:	 
 ## Write a program using Looping Structure with concept of Functions. 
 
@@ -421,5 +428,285 @@ $conn->close();
 ?>
 </body>
 </html>
+```
+---
+
+# Practical 10:	
+## Design Login Form and Validate that form using PHP Code.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validate Login Form</title>
+</head>
+<body>
+<h2>Login Form</h2>
+<form action="p8Validate.php" method="post">
+<label for="username">Username:</label>
+<input type="text" name="username" required><br>
+<label for="password">Password:</label>
+<input type="password" name="password" required><br>
+<input type="submit" value="Login">
+</form>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Validate Login</title>
+</head>
+<body>
+<?php
+// PHP code to validate the login form
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+// Get form data
+$username = $_POST["username"];
+$password = $_POST["password"];
+// Hard-coded username and password for demonstration purposes
+$valid_username = "user123";
+$valid_password = "password123";
+// Validate the login credentials
+if ($username == $valid_username && $password == $valid_password) {
+echo "Login successful! Welcome, $username.";
+} else {
+echo "Invalid username or password. Please try again."; 
+}
+} else {
+header("C:\xampp\htdocs\pra\p8.php");
+exit();
+}
+?>
+</body>
+</html> 
+```
+---
+
+# Practical 11:	
+## Write a PHP code to create database & table in Mysql 
+
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Database Create</title> 
+</head> 
+<body> 
+<?php 
+// DDL Example: Creating a Table 
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "RGI" 
+$conn = new mysqli($servername, $username, $password, $dbname); 
+if ($conn->connect_error) { 
+die("Connection failed: " . $conn->connect_error); 
+} 
+$sql = "CREATE TABLE student ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(30) NOT NULL, 
+email VARCHAR(50) NOT NULL, 
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
+)"; 
+if ($conn->query($sql) === TRUE) { 
+echo "Table created successfully"; 
+} else { 
+echo "Error creating table: " . $conn->error; 
+} $conn->close(); 
+?> 
+</body>
+</html>
+```
+---
+
+# Practical 12:	
+## Write a PHP code to insert ,delete,select the data from database 
+
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Database- Insert, Delete</title> 
+</head> 
+<body> 
+<?php 
+// Database connection parameters 
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$database = "Kumardatabase"; 
+$conn = new mysqli($servername, $username, $password, $database); 
+if ($conn->connect_error) { 
+die("Connection failed: " . $conn->connect_error); 
+} 
+$insertSql = "INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com')"; 
+if ($conn->query($insertSql) === TRUE) { 
+echo "Data inserted successfully.<br>"; 
+} else { 
+echo "Error inserting data: " . $conn->error . "<br>"; 
+} 
+// Delete data from the database 
+$deleteSql = "DELETE FROM users WHERE username='john_doe'"; 
+if ($conn->query($deleteSql) === TRUE) { 
+echo "Data deleted successfully.<br>"; 
+} else { 
+echo "Error deleting data: " . $conn->error . "<br>"; 
+} 
+// Select data from the database 
+$selectSql = "SELECT * FROM users"; 
+$result = $conn->query($selectSql); 
+if ($result->num_rows > 0) { 
+echo "<h2>Users:</h2>"; 
+while ($row = $result->fetch_assoc()) { 
+echo "ID: " . $row["id"] . " - Username: " . $row["username"] . " - Email: " . $row["email"] . "<br>"; 
+} 
+} else { 
+echo "No users found.<br>"; 
+} 
+// Close the database connection 
+$conn->close(); 
+?> 
+</body> 
+</html>
+```
+---
+
+# Practical 13:	
+## Design a from which upload & Display image in PHP 
+
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Image Upload Form</title> 
+</head> 
+<body> 
+<h2>Image Upload Form</h2> 
+<form action="upload_image.php" method="post" enctype="multipart/form-data"> 
+<label for="image">Select Image:</label> 
+<input type="file" name="image" accept="image/*" required><br> 
+<input type="submit" value="Upload Image"> 
+</form> 
+</body> 
+</html>
+```
+---
+
+# Practical 7:	
+## Write a PHP Code to make database connection, Create Data Base, Create Table In Mysql.
+
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Database & Table Create</title> 
+</head> 
+<body> 
+<?php 
+$hostname = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$conn = new mysqli($hostname, $username, $password); 
+if ($conn->connect_error) { 
+die("Connection failed: " . $conn->connect_error); 
+} 
+$databaseName = "exampledatabase"; 
+$createDatabaseSql = "CREATE DATABASE IF NOT EXISTS $databaseName"; 
+if ($conn->query($createDatabaseSql) === TRUE) { 
+echo "Database created successfully.<br>"; 
+} else { 
+echo "Error creating database: " . $conn->error . "<br>"; 
+} 
+$conn->select_db($databaseName); 
+$createTableSql = "CREATE TABLE IF NOT EXISTS users ( 
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+username VARCHAR(30) NOT NULL, 
+email VARCHAR(50) NOT NULL, 
+reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP 
+)"; 
+if ($conn->query($createTableSql) === TRUE) { 
+echo "Table created successfully.<br>"; 
+} else { 
+echo "Error creating table: " . $conn->error . "<br>"; } 
+$conn->close(); 
+?> 
+</body> 
+</html>
+```
+---
+
+# Practical 7:	
+## Write a PHP code Insert, Delete, Update, Select the Data From Database.
+
+```html
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Database - Insert , Update, Delete</title> 
+</head> 
+<body> 
+<?php 
+// Database connection parameters 
+$hostname = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$database = "exampledatabase"; 
+// Create a connection to MySQL 
+$conn = new mysqli($hostname, $username, $password, $database); 
+// Check connection 
+if ($conn->connect_error) { 
+die("Connection failed: " . $conn->connect_error); 
+} 
+$insertSql = "INSERT INTO users (username, email) VALUES ('john_doe', 'john@example.com')"; 
+if ($conn->query($insertSql) === TRUE) { 
+echo "Data inserted successfully.<br>"; 
+} else { 
+echo "Error inserting data: " . $conn->error . "<br>"; 
+} 
+// Update data in the table 
+$updateSql = "UPDATE users SET email='john_updated@example.com' WHERE username='john_doe'"; 
+if ($conn->query($updateSql) === TRUE) { 
+echo "Data updated successfully.<br>"; 
+} else { 
+echo "Error updating data: " . $conn->error . "<br>"; 
+} 
+// Delete data from the table 
+$deleteSql = "DELETE FROM users WHERE username='john_doe'"; 
+if ($conn->query($deleteSql) === TRUE) { 
+echo "Data deleted successfully.<br>"; 
+} else { 
+echo "Error deleting data: " . $conn->error . "<br>"; 
+} 
+// Select data from the table 
+$selectSql = "SELECT * FROM users"; 
+$result = $conn->query($selectSql); 
+if ($result->num_rows > 0) { 
+echo "<h2>Users:</h2>"; 
+while ($row = $result->fetch_assoc()) { 
+echo "ID: " . $row["id"] . " - Username: " . $row["username"] . " - Email: " . $row["email"] . "<br>"; 
+} 
+} else { 
+echo "No users found.<br>"; 
+} 
+// Close the database connection 
+$conn->close(); 
+?> 
+</body> 
+</html> 
 ```
 ---
