@@ -75,22 +75,20 @@ echo "$value <br>";
 
 ```html
 <!DOCTYPE html>
-<html>
+<html>  
 <head> 
-<title> Function using Looping Structure </title> 
+<title>Array Values</title> 
 </head> 
 <body> 
 <?php 
-function table($n)
-{
-   for($i=1;$i<=10; $i++)
-    {
-         echo “$n*$i=”.$n*$n*$i.”<br>”;
-     }
-}
-  table(5);
-?>
-</html>
+$color = array("green", "red", "yellow","blue","black"); 
+foreach ($color as $value) 
+{ 
+echo "$value <br>"; 
+} 
+?> 
+</body> 
+</html> 
 ```
 ---
 
