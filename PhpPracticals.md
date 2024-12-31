@@ -185,8 +185,8 @@ echo "Sorted Array: " . implode(", ", $arrayToSort) . "<br>";
 # Practical 7:	
 ## Design the personal information form, submit and retrieve the form data using php $_POST, $_GET, $ REQUEST variable.  
 
+### HTML File:
 ```html
-HTML File: - 
 <!DOCTYPE html> 
 <html lang="en"> 
 <head> 
@@ -206,8 +206,11 @@ HTML File: -
 <input type="submit" value="Submit"> 
 </form> 
 </body> 
-</html> 
-PHP File: - 
+</html>
+```
+
+### PHP File:
+```html
 <!DOCTYPE html> 
 <head> 
 <title>Process Form</title> 
@@ -260,7 +263,8 @@ echo "Age: $age_request<br>";
 
 ### Session 1:
 ```html
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head> 
 <title>Session 1</title> 
 </head> 
@@ -278,11 +282,12 @@ echo "Cookie named '" . $cookie_name . "' is not set.";
 } 
 ?> 
 </body>
+</html>
 ```
 ### Session 2:
 ```html
-</html>
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<html>
 <head> 
 <title>Session 2</title> 
 </head> 
@@ -454,6 +459,7 @@ $conn->close();
 ```
 ```html
 <!DOCTYPE html>
+<html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -502,7 +508,7 @@ exit();
 $servername = "localhost"; 
 $username = "root"; 
 $password = ""; 
-$dbname = "RGI" 
+$dbname = "RGI";
 $conn = new mysqli($servername, $username, $password, $dbname); 
 if ($conn->connect_error) { 
 die("Connection failed: " . $conn->connect_error); 
