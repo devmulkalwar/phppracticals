@@ -58,7 +58,7 @@ if ($marks > 79) {
 </head> 
 <body> 
 <?php 
-$color = array("green", "red", "yellow",”blue”,”black”); 
+$color = array("green", "red", "yellow","blue","black"); 
 foreach ($color as $value) 
 { 
 echo "$value <br>"; 
@@ -74,21 +74,22 @@ echo "$value <br>";
 ## Write a program using Looping Structure with concept of Functions. 
 
 ```html
-<!DOCTYPE html>
-<html>  
+<!DOCTYPE html> 
 <head> 
-<title>Array Values</title> 
+<title> Function using Looping Structure </title> 
 </head> 
 <body> 
 <?php 
-$color = array("green", "red", "yellow","blue","black"); 
-foreach ($color as $value) 
-{ 
-echo "$value <br>"; 
-} 
-?> 
-</body> 
-</html> 
+function table($n)
+{
+   for($i=1;$i<=10; $i++)
+    {
+         echo “$n*$i=”.$n*$n*$i.”<br>”;
+     }
+}
+  table(5);
+?>
+
 ```
 ---
 
